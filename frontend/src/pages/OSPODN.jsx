@@ -48,7 +48,7 @@ function OSPODN() {
   const costPerHp = hp > 0 ? Math.round(total / hp) : 0;
 
   const downloadReport = () => {
-    window.open("http://127.0.0.1:8000/download/OSP_ODN.xlsx", "_blank");
+    window.open("http://https://airtel-genex-backend.onrender.com/download/OSP_ODN.xlsx", "_blank");
   };
 
   return (
