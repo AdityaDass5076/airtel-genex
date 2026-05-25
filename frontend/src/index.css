@@ -1,0 +1,35 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#020617;color:white;font-family:Inter,Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.genex-bg{min-height:100vh;background:radial-gradient(circle at top left,#3b0008,#020617 35%),radial-gradient(circle at right,#001b33,#020617 40%);}
+.glass{background:rgba(6,15,32,.88);border:1px solid rgba(0,180,255,.25);box-shadow:0 0 28px rgba(0,174,255,.12);border-radius:22px}
+.red{color:#ff2638}.green{color:#15ff8a}.cyan{color:#00c8ff}.orange{color:#ff9900}
+.btn{background:linear-gradient(135deg,#ff2338,#8b0010);border:1px solid #ff4d5f;color:white;padding:13px 24px;border-radius:14px;cursor:pointer;box-shadow:0 0 22px rgba(255,35,56,.45)}
+.input{width:100%;padding:15px;background:#050b18;border:1px solid #27364f;border-radius:14px;color:white;outline:none}
+.input:focus{border-color:#ff2638}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:280px;padding:24px;background:#050b18;border-right:1px solid #12314c}
+.logo{font-size:40px;font-weight:900;color:#ff2638}
+.brand{font-size:22px;font-weight:800;letter-spacing:5px;margin-top:6px}
+.menu{margin-top:35px;display:flex;flex-direction:column;gap:10px}
+.menu a{padding:14px 16px;border-radius:14px;color:#d7e6ff}
+.menu a.active,.menu a:hover{background:linear-gradient(135deg,#ff2638,#71101a);box-shadow:0 0 22px rgba(255,38,56,.45)}
+.main{flex:1}
+.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:#050b18;border-bottom:1px solid #12314c}
+.content{padding:28px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{padding:24px}
+.card h2{font-size:34px;margin-top:10px}
+.page-title{font-size:42px;font-weight:900}
+.muted{color:#9fb0c8;margin-top:8px}
+.upload-box{border:2px dashed #ff2638;border-radius:22px;padding:70px;text-align:center;margin-top:25px;background:rgba(255,38,56,.04)}
+.table{width:100%;border-collapse:collapse;margin-top:20px}
+.table th,.table td{padding:14px;border-bottom:1px solid #1d3048;text-align:left}
+.login-wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:radial-gradient(circle at left,#3a0008,#020617 45%)}
+.login-left{padding:70px;display:flex;flex-direction:column;justify-content:space-between}
+.login-title{font-size:76px;font-weight:900;color:#ff2638}
+.genex-title{font-size:74px;font-weight:900;letter-spacing:16px;margin-top:60px}
+.login-card{width:620px;padding:55px;border:1px solid #ff2638;border-radius:34px;background:rgba(6,15,32,.82);box-shadow:0 0 60px rgba(255,38,56,.25)}
+.login-right{display:flex;align-items:center;justify-content:center}

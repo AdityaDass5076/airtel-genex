@@ -1,0 +1,206 @@
+.settings-page {
+  color: var(--text-main);
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.settings-header h1 {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.settings-header p,
+.muted {
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.settings-save-btn {
+  border: none;
+  background: linear-gradient(135deg, #ff2338, #a00618);
+  color: white;
+  padding: 14px 22px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 800;
+  box-shadow: 0 0 24px rgba(255, 35, 56, 0.45);
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.settings-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.settings-card.wide {
+  grid-column: span 2;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.card-title svg {
+  color: #ff2338;
+}
+
+.card-title h2 {
+  font-size: 24px;
+}
+
+.theme-options {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.theme-option {
+  text-align: left;
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid var(--card-border);
+  background: var(--input-bg);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.theme-option svg {
+  color: #ff2338;
+  margin-bottom: 16px;
+}
+
+.theme-option h3 {
+  font-size: 20px;
+}
+
+.theme-option p {
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.theme-option.active,
+.theme-option:hover {
+  border-color: rgba(255, 35, 56, 0.8);
+  box-shadow: 0 0 28px rgba(255, 35, 56, 0.28);
+  transform: translateY(-3px);
+}
+
+.settings-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.settings-card input,
+.settings-card select {
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-main);
+  padding: 0 14px;
+  outline: none;
+}
+
+.settings-card option {
+  background: #020617;
+  color: white;
+}
+
+.setting-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.setting-toggle span {
+  color: var(--text-main);
+}
+
+.toggle {
+  width: 54px;
+  height: 28px;
+  border-radius: 999px;
+  border: none;
+  background: #334155;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.toggle span {
+  width: 22px;
+  height: 22px;
+  background: white;
+  display: block;
+  border-radius: 50%;
+  transition: 0.25s;
+}
+
+.toggle.active {
+  background: #ff2338;
+}
+
+.toggle.active span {
+  transform: translateX(26px);
+}
+
+.security-note {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 35, 56, 0.1);
+  color: var(--text-main);
+}
+
+.danger-btn {
+  margin-top: 22px;
+  border: 1px solid rgba(255, 35, 56, 0.7);
+  background: rgba(255, 35, 56, 0.1);
+  color: #ff4355;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .settings-grid,
+  .theme-options {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-card.wide {
+    grid-column: span 1;
+  }
+
+  .settings-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
