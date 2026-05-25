@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import "./AppLayout.css";
 
+const API_BASE = "https://airtel-genex-backend.onrender.com";
+
 function UploadDesign() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -33,18 +35,32 @@ function UploadDesign() {
     formData.append("file", selectedFile);
 
     try {
-      const response = await fetch("https://airtel-genex-backend.onrender.com/upload-design", {
+      const response = await fetch(`${API_BASE}/upload-design`, {
         method: "POST",
         body: formData,
       });
 
+      if (!response.ok) {
+        throw new Error("Backend upload request failed");
+      }
+
       const result = await response.json();
+
+      if (result.data?.error) {
+        setExtractData(result.data);
+        alert("File uploaded, but extraction failed. Check DXF format.");
+        return;
+      }
+
       setExtractData(result.data);
       localStorage.setItem("genex-extraction", JSON.stringify(result.data));
+
       alert("Design uploaded and processed successfully.");
     } catch (error) {
-      alert("Upload failed. Check if backend is running.");
-      console.error(error);
+      console.error("Upload Error:", error);
+      alert(
+        "Upload failed. Open the backend URL once to wake Render, then try again."
+      );
     } finally {
       setUploading(false);
     }
@@ -52,21 +68,26 @@ function UploadDesign() {
 
   const generateReports = async () => {
     try {
-      const response = await fetch("https://airtel-genex-backend.onrender.com/generate-reports", {
+      const response = await fetch(`${API_BASE}/generate-reports`, {
         method: "POST",
       });
 
+      if (!response.ok) {
+        throw new Error("Report generation failed");
+      }
+
       const result = await response.json();
-      setGeneratedFiles(result.files);
+      setGeneratedFiles(result.files || []);
+
       alert("Reports generated successfully.");
     } catch (error) {
-      alert("Report generation failed.");
-      console.error(error);
+      console.error("Report Error:", error);
+      alert("Report generation failed. Check backend deployment.");
     }
   };
 
   const downloadFile = (filename) => {
-    window.open(`https://airtel-genex-backend.onrender.com/download/${filename}`, "_blank");
+    window.open(`${API_BASE}/download/${filename}`, "_blank");
   };
 
   return (
@@ -117,12 +138,30 @@ function UploadDesign() {
           ) : (
             <>
               <div className="extraction-grid">
-                <ExtractCard label="FAT/FMS Count" value={extractData.fat_count} />
-                <ExtractCard label="OTB Count" value={extractData.otb_count} />
-                <ExtractCard label="ODF Count" value={extractData.odf_count} />
-                <ExtractCard label="Splitter Count" value={extractData.splitter_count} />
-                <ExtractCard label="Cable Length" value={`${extractData.cable_length} m`} />
-                <ExtractCard label="HP Count" value={extractData.hp_count} />
+                <ExtractCard
+                  label="FAT/FMS Count"
+                  value={extractData.fat_count}
+                />
+                <ExtractCard
+                  label="OTB Count"
+                  value={extractData.otb_count}
+                />
+                <ExtractCard
+                  label="ODF Count"
+                  value={extractData.odf_count}
+                />
+                <ExtractCard
+                  label="Splitter Count"
+                  value={extractData.splitter_count}
+                />
+                <ExtractCard
+                  label="Cable Length"
+                  value={`${extractData.cable_length || 0} m`}
+                />
+                <ExtractCard
+                  label="HP Count"
+                  value={extractData.hp_count}
+                />
               </div>
 
               <div className="bom-section">
@@ -159,17 +198,27 @@ function UploadDesign() {
 
               <div className="debug-section">
                 <h2>Detected Drawing Text</h2>
+
                 <div className="debug-box">
-                  {extractData.texts_found?.map((text, index) => (
-                    <p key={index}>{text}</p>
-                  ))}
+                  {extractData.texts_found?.length > 0 ? (
+                    extractData.texts_found.map((text, index) => (
+                      <p key={index}>{text}</p>
+                    ))
+                  ) : (
+                    <p>No drawing text detected.</p>
+                  )}
                 </div>
 
                 <h2>Detected Layers</h2>
+
                 <div className="debug-box">
-                  {extractData.layers_found?.map((layer, index) => (
-                    <p key={index}>{layer}</p>
-                  ))}
+                  {extractData.layers_found?.length > 0 ? (
+                    extractData.layers_found.map((layer, index) => (
+                      <p key={index}>{layer}</p>
+                    ))
+                  ) : (
+                    <p>No layers detected.</p>
+                  )}
                 </div>
               </div>
             </>
