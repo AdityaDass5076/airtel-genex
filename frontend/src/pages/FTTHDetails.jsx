@@ -34,7 +34,7 @@ function FTTHDetails() {
   const total = costRows.reduce((sum, row) => sum + row[3], 0);
 
   const downloadReport = () => {
-    window.open("http://127.0.0.1:8000/download/FTTH_Details.xlsx", "_blank");
+    window.open("https://airtel-genex-backend.onrender.com/download/FTTH_Details.xlsx", "_blank");
   };
 
   return (

@@ -74,7 +74,7 @@ function Verification() {
   const materials = extraction.bom_items || [];
 
   const downloadValidation = () => {
-    window.open("http://127.0.0.1:8000/download/Validation_Report.xlsx", "_blank");
+    window.open("https://airtel-genex-backend.onrender.com/download/Validation_Report.xlsx", "_blank");
   };
 
   return (
