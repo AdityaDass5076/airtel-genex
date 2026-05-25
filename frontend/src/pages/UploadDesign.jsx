@@ -33,7 +33,7 @@ function UploadDesign() {
     formData.append("file", selectedFile);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/upload-design", {
+      const response = await fetch("https://airtel-genex-backend.onrender.com/upload-design", {
         method: "POST",
         body: formData,
       });
@@ -52,7 +52,7 @@ function UploadDesign() {
 
   const generateReports = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/generate-reports", {
+      const response = await fetch("https://airtel-genex-backend.onrender.com/generate-reports", {
         method: "POST",
       });
 
@@ -66,7 +66,7 @@ function UploadDesign() {
   };
 
   const downloadFile = (filename) => {
-    window.open(`http://127.0.0.1:8000/download/${filename}`, "_blank");
+    window.open(`https://airtel-genex-backend.onrender.com/download/${filename}`, "_blank");
   };
 
   return (
