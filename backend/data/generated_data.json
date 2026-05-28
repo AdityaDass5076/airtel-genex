@@ -1,0 +1,1075 @@
+{
+    "project": {},
+    "extraction": {
+        "odf_count": 0,
+        "fat_count": 7.0,
+        "fms_count": 1.0,
+        "otb_count": 0,
+        "closure_count": 0,
+        "pole_count": 0,
+        "splitter_count": 7.0,
+        "cable_96f": 0,
+        "cable_48f": 0,
+        "cable_24f": 232.0,
+        "cable_12f": 167.0,
+        "cable_6f": 0,
+        "duct_length": 234.0,
+        "cc_trench": 12.0,
+        "pvc_25mm": 3.0,
+        "cable_length": 399.0,
+        "hp_count": 50,
+        "bom_items": [
+            {
+                "item": "FAT Box",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "24F FMS",
+                "quantity": 1.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "1:8 Splitters",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "96F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "48F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "24F Cable",
+                "quantity": 232.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "12F Cable",
+                "quantity": 167.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "6F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "DUCT",
+                "quantity": 234.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "C.C Trench",
+                "quantity": 12.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "25MM PVC",
+                "quantity": 3.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "ODF",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "OTB",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Closure",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Pole",
+                "quantity": 0,
+                "uom": "Nos"
+            }
+        ],
+        "texts_found": [
+            "Survey By : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Santhosh \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Design By : A.Harsha Vardhan BPE Name : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Munagala Dileep Kumar\\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x; RWA : NA",
+            "Design Type : Terrace Plan \\pxql;Home Connect : External Cordinates : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;17.5624863,78.2604338 \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Survey Date : 05/05/2026",
+            "\\L\\C1;BOM:\\fTimes New Roman|b0|i0|c0|p18;\\l\\C256; \\pxi-3,l3,t3;1. 24F FMS : 1Nos 2. 1: 8*1 Splitters : 7Nos 3. 24F Cable : 232Meters 4. 12F Cable :167Meters 5. DUCT : 234Meters 6. C.C Trench :12Meters 7. 25MM PVC :3Meters",
+            "Actual HP -50 Planned HP -56",
+            "Medha infra NLCB IRIS - 50HP",
+            "\\fTimes New Roman|b0|i0|c0|p18;FAT BOX",
+            "\\fTimes New Roman|b0|i0|c0|p18;OTB",
+            "\\fTimes New Roman|b0|i0|c0|p18;FMS",
+            "\\fTimes New Roman|b0|i0|c0|p18;ODF",
+            "Closure",
+            "Pole",
+            "96F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;48F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;24F Cable",
+            "12F Riser",
+            "6F Cable",
+            "12F Universal",
+            "\\C177;\\c8991017;PVC",
+            "\\C177;\\c8991017;Duct",
+            "\\LLegend :",
+            "\\C177;\\c8991017;Trenching",
+            "Compound Wall",
+            "STEPS",
+            "STEPS",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "Main Gate",
+            "507(5HP)",
+            "506(5HP)",
+            "508(5HP)",
+            "509(5HP)",
+            "510(5HP)",
+            "505(5HP)",
+            "504(5HP)",
+            "501(5HP)",
+            "503(5HP)",
+            "502(5HP)",
+            "12M 24F Cable With C.C Trench",
+            "10M 24F Cable With Compound Wall Clamping with Duct",
+            "3M 24F Cable With PVC",
+            "4M 24F Cable Vertical Clamping to Pillar with Duct",
+            "18M 24F Cable Vertical Clamping with Duct",
+            "95M 12F Cable with Duct",
+            "35M 12F Cable with Duct"
+        ],
+        "layers_found": [
+            "FLOORS",
+            "0",
+            "6F CABLE",
+            "POLE",
+            "12F UNIVERSAL",
+            "CLOSURE",
+            "FAT",
+            "OTB",
+            "FMS",
+            "ODF",
+            "96F CABLE",
+            "48F CABLE",
+            "24F CABLE",
+            "12F RISER",
+            "AAA01"
+        ],
+        "blocks_found": [
+            "FLOOR",
+            "CHAMBER",
+            "FMS",
+            "FAT",
+            "OTB",
+            "POLE",
+            "ODF",
+            "IBDPOLE"
+        ]
+    },
+    "mwo": {
+        "odf_count": 0,
+        "fat_count": 7.0,
+        "fms_count": 1.0,
+        "otb_count": 0,
+        "closure_count": 0,
+        "pole_count": 0,
+        "splitter_count": 7.0,
+        "cable_96f": 0,
+        "cable_48f": 0,
+        "cable_24f": 232.0,
+        "cable_12f": 167.0,
+        "cable_6f": 0,
+        "duct_length": 234.0,
+        "cc_trench": 12.0,
+        "pvc_25mm": 3.0,
+        "cable_length": 399.0,
+        "hp_count": 50,
+        "bom_items": [
+            {
+                "item": "FAT Box",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "24F FMS",
+                "quantity": 1.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "1:8 Splitters",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "96F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "48F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "24F Cable",
+                "quantity": 232.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "12F Cable",
+                "quantity": 167.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "6F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "DUCT",
+                "quantity": 234.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "C.C Trench",
+                "quantity": 12.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "25MM PVC",
+                "quantity": 3.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "ODF",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "OTB",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Closure",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Pole",
+                "quantity": 0,
+                "uom": "Nos"
+            }
+        ],
+        "texts_found": [
+            "Survey By : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Santhosh \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Design By : A.Harsha Vardhan BPE Name : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Munagala Dileep Kumar\\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x; RWA : NA",
+            "Design Type : Terrace Plan \\pxql;Home Connect : External Cordinates : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;17.5624863,78.2604338 \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Survey Date : 05/05/2026",
+            "\\L\\C1;BOM:\\fTimes New Roman|b0|i0|c0|p18;\\l\\C256; \\pxi-3,l3,t3;1. 24F FMS : 1Nos 2. 1: 8*1 Splitters : 7Nos 3. 24F Cable : 232Meters 4. 12F Cable :167Meters 5. DUCT : 234Meters 6. C.C Trench :12Meters 7. 25MM PVC :3Meters",
+            "Actual HP -50 Planned HP -56",
+            "Medha infra NLCB IRIS - 50HP",
+            "\\fTimes New Roman|b0|i0|c0|p18;FAT BOX",
+            "\\fTimes New Roman|b0|i0|c0|p18;OTB",
+            "\\fTimes New Roman|b0|i0|c0|p18;FMS",
+            "\\fTimes New Roman|b0|i0|c0|p18;ODF",
+            "Closure",
+            "Pole",
+            "96F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;48F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;24F Cable",
+            "12F Riser",
+            "6F Cable",
+            "12F Universal",
+            "\\C177;\\c8991017;PVC",
+            "\\C177;\\c8991017;Duct",
+            "\\LLegend :",
+            "\\C177;\\c8991017;Trenching",
+            "Compound Wall",
+            "STEPS",
+            "STEPS",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "Main Gate",
+            "507(5HP)",
+            "506(5HP)",
+            "508(5HP)",
+            "509(5HP)",
+            "510(5HP)",
+            "505(5HP)",
+            "504(5HP)",
+            "501(5HP)",
+            "503(5HP)",
+            "502(5HP)",
+            "12M 24F Cable With C.C Trench",
+            "10M 24F Cable With Compound Wall Clamping with Duct",
+            "3M 24F Cable With PVC",
+            "4M 24F Cable Vertical Clamping to Pillar with Duct",
+            "18M 24F Cable Vertical Clamping with Duct",
+            "95M 12F Cable with Duct",
+            "35M 12F Cable with Duct"
+        ],
+        "layers_found": [
+            "FLOORS",
+            "0",
+            "6F CABLE",
+            "POLE",
+            "12F UNIVERSAL",
+            "CLOSURE",
+            "FAT",
+            "OTB",
+            "FMS",
+            "ODF",
+            "96F CABLE",
+            "48F CABLE",
+            "24F CABLE",
+            "12F RISER",
+            "AAA01"
+        ],
+        "blocks_found": [
+            "FLOOR",
+            "CHAMBER",
+            "FMS",
+            "FAT",
+            "OTB",
+            "POLE",
+            "ODF",
+            "IBDPOLE"
+        ]
+    },
+    "osp_odn": {
+        "odf_count": 0,
+        "fat_count": 7.0,
+        "fms_count": 1.0,
+        "otb_count": 0,
+        "closure_count": 0,
+        "pole_count": 0,
+        "splitter_count": 7.0,
+        "cable_96f": 0,
+        "cable_48f": 0,
+        "cable_24f": 232.0,
+        "cable_12f": 167.0,
+        "cable_6f": 0,
+        "duct_length": 234.0,
+        "cc_trench": 12.0,
+        "pvc_25mm": 3.0,
+        "cable_length": 399.0,
+        "hp_count": 50,
+        "bom_items": [
+            {
+                "item": "FAT Box",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "24F FMS",
+                "quantity": 1.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "1:8 Splitters",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "96F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "48F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "24F Cable",
+                "quantity": 232.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "12F Cable",
+                "quantity": 167.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "6F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "DUCT",
+                "quantity": 234.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "C.C Trench",
+                "quantity": 12.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "25MM PVC",
+                "quantity": 3.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "ODF",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "OTB",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Closure",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Pole",
+                "quantity": 0,
+                "uom": "Nos"
+            }
+        ],
+        "texts_found": [
+            "Survey By : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Santhosh \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Design By : A.Harsha Vardhan BPE Name : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Munagala Dileep Kumar\\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x; RWA : NA",
+            "Design Type : Terrace Plan \\pxql;Home Connect : External Cordinates : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;17.5624863,78.2604338 \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Survey Date : 05/05/2026",
+            "\\L\\C1;BOM:\\fTimes New Roman|b0|i0|c0|p18;\\l\\C256; \\pxi-3,l3,t3;1. 24F FMS : 1Nos 2. 1: 8*1 Splitters : 7Nos 3. 24F Cable : 232Meters 4. 12F Cable :167Meters 5. DUCT : 234Meters 6. C.C Trench :12Meters 7. 25MM PVC :3Meters",
+            "Actual HP -50 Planned HP -56",
+            "Medha infra NLCB IRIS - 50HP",
+            "\\fTimes New Roman|b0|i0|c0|p18;FAT BOX",
+            "\\fTimes New Roman|b0|i0|c0|p18;OTB",
+            "\\fTimes New Roman|b0|i0|c0|p18;FMS",
+            "\\fTimes New Roman|b0|i0|c0|p18;ODF",
+            "Closure",
+            "Pole",
+            "96F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;48F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;24F Cable",
+            "12F Riser",
+            "6F Cable",
+            "12F Universal",
+            "\\C177;\\c8991017;PVC",
+            "\\C177;\\c8991017;Duct",
+            "\\LLegend :",
+            "\\C177;\\c8991017;Trenching",
+            "Compound Wall",
+            "STEPS",
+            "STEPS",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "Main Gate",
+            "507(5HP)",
+            "506(5HP)",
+            "508(5HP)",
+            "509(5HP)",
+            "510(5HP)",
+            "505(5HP)",
+            "504(5HP)",
+            "501(5HP)",
+            "503(5HP)",
+            "502(5HP)",
+            "12M 24F Cable With C.C Trench",
+            "10M 24F Cable With Compound Wall Clamping with Duct",
+            "3M 24F Cable With PVC",
+            "4M 24F Cable Vertical Clamping to Pillar with Duct",
+            "18M 24F Cable Vertical Clamping with Duct",
+            "95M 12F Cable with Duct",
+            "35M 12F Cable with Duct"
+        ],
+        "layers_found": [
+            "FLOORS",
+            "0",
+            "6F CABLE",
+            "POLE",
+            "12F UNIVERSAL",
+            "CLOSURE",
+            "FAT",
+            "OTB",
+            "FMS",
+            "ODF",
+            "96F CABLE",
+            "48F CABLE",
+            "24F CABLE",
+            "12F RISER",
+            "AAA01"
+        ],
+        "blocks_found": [
+            "FLOOR",
+            "CHAMBER",
+            "FMS",
+            "FAT",
+            "OTB",
+            "POLE",
+            "ODF",
+            "IBDPOLE"
+        ]
+    },
+    "oh_accessories": {
+        "odf_count": 0,
+        "fat_count": 7.0,
+        "fms_count": 1.0,
+        "otb_count": 0,
+        "closure_count": 0,
+        "pole_count": 0,
+        "splitter_count": 7.0,
+        "cable_96f": 0,
+        "cable_48f": 0,
+        "cable_24f": 232.0,
+        "cable_12f": 167.0,
+        "cable_6f": 0,
+        "duct_length": 234.0,
+        "cc_trench": 12.0,
+        "pvc_25mm": 3.0,
+        "cable_length": 399.0,
+        "hp_count": 50,
+        "bom_items": [
+            {
+                "item": "FAT Box",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "24F FMS",
+                "quantity": 1.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "1:8 Splitters",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "96F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "48F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "24F Cable",
+                "quantity": 232.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "12F Cable",
+                "quantity": 167.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "6F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "DUCT",
+                "quantity": 234.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "C.C Trench",
+                "quantity": 12.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "25MM PVC",
+                "quantity": 3.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "ODF",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "OTB",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Closure",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Pole",
+                "quantity": 0,
+                "uom": "Nos"
+            }
+        ],
+        "texts_found": [
+            "Survey By : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Santhosh \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Design By : A.Harsha Vardhan BPE Name : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Munagala Dileep Kumar\\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x; RWA : NA",
+            "Design Type : Terrace Plan \\pxql;Home Connect : External Cordinates : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;17.5624863,78.2604338 \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Survey Date : 05/05/2026",
+            "\\L\\C1;BOM:\\fTimes New Roman|b0|i0|c0|p18;\\l\\C256; \\pxi-3,l3,t3;1. 24F FMS : 1Nos 2. 1: 8*1 Splitters : 7Nos 3. 24F Cable : 232Meters 4. 12F Cable :167Meters 5. DUCT : 234Meters 6. C.C Trench :12Meters 7. 25MM PVC :3Meters",
+            "Actual HP -50 Planned HP -56",
+            "Medha infra NLCB IRIS - 50HP",
+            "\\fTimes New Roman|b0|i0|c0|p18;FAT BOX",
+            "\\fTimes New Roman|b0|i0|c0|p18;OTB",
+            "\\fTimes New Roman|b0|i0|c0|p18;FMS",
+            "\\fTimes New Roman|b0|i0|c0|p18;ODF",
+            "Closure",
+            "Pole",
+            "96F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;48F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;24F Cable",
+            "12F Riser",
+            "6F Cable",
+            "12F Universal",
+            "\\C177;\\c8991017;PVC",
+            "\\C177;\\c8991017;Duct",
+            "\\LLegend :",
+            "\\C177;\\c8991017;Trenching",
+            "Compound Wall",
+            "STEPS",
+            "STEPS",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "Main Gate",
+            "507(5HP)",
+            "506(5HP)",
+            "508(5HP)",
+            "509(5HP)",
+            "510(5HP)",
+            "505(5HP)",
+            "504(5HP)",
+            "501(5HP)",
+            "503(5HP)",
+            "502(5HP)",
+            "12M 24F Cable With C.C Trench",
+            "10M 24F Cable With Compound Wall Clamping with Duct",
+            "3M 24F Cable With PVC",
+            "4M 24F Cable Vertical Clamping to Pillar with Duct",
+            "18M 24F Cable Vertical Clamping with Duct",
+            "95M 12F Cable with Duct",
+            "35M 12F Cable with Duct"
+        ],
+        "layers_found": [
+            "FLOORS",
+            "0",
+            "6F CABLE",
+            "POLE",
+            "12F UNIVERSAL",
+            "CLOSURE",
+            "FAT",
+            "OTB",
+            "FMS",
+            "ODF",
+            "96F CABLE",
+            "48F CABLE",
+            "24F CABLE",
+            "12F RISER",
+            "AAA01"
+        ],
+        "blocks_found": [
+            "FLOOR",
+            "CHAMBER",
+            "FMS",
+            "FAT",
+            "OTB",
+            "POLE",
+            "ODF",
+            "IBDPOLE"
+        ]
+    },
+    "ftth_details": {
+        "odf_count": 0,
+        "fat_count": 7.0,
+        "fms_count": 1.0,
+        "otb_count": 0,
+        "closure_count": 0,
+        "pole_count": 0,
+        "splitter_count": 7.0,
+        "cable_96f": 0,
+        "cable_48f": 0,
+        "cable_24f": 232.0,
+        "cable_12f": 167.0,
+        "cable_6f": 0,
+        "duct_length": 234.0,
+        "cc_trench": 12.0,
+        "pvc_25mm": 3.0,
+        "cable_length": 399.0,
+        "hp_count": 50,
+        "bom_items": [
+            {
+                "item": "FAT Box",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "24F FMS",
+                "quantity": 1.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "1:8 Splitters",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "96F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "48F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "24F Cable",
+                "quantity": 232.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "12F Cable",
+                "quantity": 167.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "6F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "DUCT",
+                "quantity": 234.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "C.C Trench",
+                "quantity": 12.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "25MM PVC",
+                "quantity": 3.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "ODF",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "OTB",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Closure",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Pole",
+                "quantity": 0,
+                "uom": "Nos"
+            }
+        ],
+        "texts_found": [
+            "Survey By : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Santhosh \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Design By : A.Harsha Vardhan BPE Name : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Munagala Dileep Kumar\\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x; RWA : NA",
+            "Design Type : Terrace Plan \\pxql;Home Connect : External Cordinates : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;17.5624863,78.2604338 \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Survey Date : 05/05/2026",
+            "\\L\\C1;BOM:\\fTimes New Roman|b0|i0|c0|p18;\\l\\C256; \\pxi-3,l3,t3;1. 24F FMS : 1Nos 2. 1: 8*1 Splitters : 7Nos 3. 24F Cable : 232Meters 4. 12F Cable :167Meters 5. DUCT : 234Meters 6. C.C Trench :12Meters 7. 25MM PVC :3Meters",
+            "Actual HP -50 Planned HP -56",
+            "Medha infra NLCB IRIS - 50HP",
+            "\\fTimes New Roman|b0|i0|c0|p18;FAT BOX",
+            "\\fTimes New Roman|b0|i0|c0|p18;OTB",
+            "\\fTimes New Roman|b0|i0|c0|p18;FMS",
+            "\\fTimes New Roman|b0|i0|c0|p18;ODF",
+            "Closure",
+            "Pole",
+            "96F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;48F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;24F Cable",
+            "12F Riser",
+            "6F Cable",
+            "12F Universal",
+            "\\C177;\\c8991017;PVC",
+            "\\C177;\\c8991017;Duct",
+            "\\LLegend :",
+            "\\C177;\\c8991017;Trenching",
+            "Compound Wall",
+            "STEPS",
+            "STEPS",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "Main Gate",
+            "507(5HP)",
+            "506(5HP)",
+            "508(5HP)",
+            "509(5HP)",
+            "510(5HP)",
+            "505(5HP)",
+            "504(5HP)",
+            "501(5HP)",
+            "503(5HP)",
+            "502(5HP)",
+            "12M 24F Cable With C.C Trench",
+            "10M 24F Cable With Compound Wall Clamping with Duct",
+            "3M 24F Cable With PVC",
+            "4M 24F Cable Vertical Clamping to Pillar with Duct",
+            "18M 24F Cable Vertical Clamping with Duct",
+            "95M 12F Cable with Duct",
+            "35M 12F Cable with Duct"
+        ],
+        "layers_found": [
+            "FLOORS",
+            "0",
+            "6F CABLE",
+            "POLE",
+            "12F UNIVERSAL",
+            "CLOSURE",
+            "FAT",
+            "OTB",
+            "FMS",
+            "ODF",
+            "96F CABLE",
+            "48F CABLE",
+            "24F CABLE",
+            "12F RISER",
+            "AAA01"
+        ],
+        "blocks_found": [
+            "FLOOR",
+            "CHAMBER",
+            "FMS",
+            "FAT",
+            "OTB",
+            "POLE",
+            "ODF",
+            "IBDPOLE"
+        ]
+    },
+    "verification": {
+        "odf_count": 0,
+        "fat_count": 7.0,
+        "fms_count": 1.0,
+        "otb_count": 0,
+        "closure_count": 0,
+        "pole_count": 0,
+        "splitter_count": 7.0,
+        "cable_96f": 0,
+        "cable_48f": 0,
+        "cable_24f": 232.0,
+        "cable_12f": 167.0,
+        "cable_6f": 0,
+        "duct_length": 234.0,
+        "cc_trench": 12.0,
+        "pvc_25mm": 3.0,
+        "cable_length": 399.0,
+        "hp_count": 50,
+        "bom_items": [
+            {
+                "item": "FAT Box",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "24F FMS",
+                "quantity": 1.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "1:8 Splitters",
+                "quantity": 7.0,
+                "uom": "Nos"
+            },
+            {
+                "item": "96F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "48F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "24F Cable",
+                "quantity": 232.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "12F Cable",
+                "quantity": 167.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "6F Cable",
+                "quantity": 0,
+                "uom": "Meters"
+            },
+            {
+                "item": "DUCT",
+                "quantity": 234.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "C.C Trench",
+                "quantity": 12.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "25MM PVC",
+                "quantity": 3.0,
+                "uom": "Meters"
+            },
+            {
+                "item": "ODF",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "OTB",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Closure",
+                "quantity": 0,
+                "uom": "Nos"
+            },
+            {
+                "item": "Pole",
+                "quantity": 0,
+                "uom": "Nos"
+            }
+        ],
+        "texts_found": [
+            "Survey By : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Santhosh \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Design By : A.Harsha Vardhan BPE Name : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;Munagala Dileep Kumar\\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x; RWA : NA",
+            "Design Type : Terrace Plan \\pxql;Home Connect : External Cordinates : \\fCalibri|b0|i0|c0|p34;\\H0.91667x;17.5624863,78.2604338 \\fTimes New Roman|b0|i0|c0|p18;\\H1.09091x;Survey Date : 05/05/2026",
+            "\\L\\C1;BOM:\\fTimes New Roman|b0|i0|c0|p18;\\l\\C256; \\pxi-3,l3,t3;1. 24F FMS : 1Nos 2. 1: 8*1 Splitters : 7Nos 3. 24F Cable : 232Meters 4. 12F Cable :167Meters 5. DUCT : 234Meters 6. C.C Trench :12Meters 7. 25MM PVC :3Meters",
+            "Actual HP -50 Planned HP -56",
+            "Medha infra NLCB IRIS - 50HP",
+            "\\fTimes New Roman|b0|i0|c0|p18;FAT BOX",
+            "\\fTimes New Roman|b0|i0|c0|p18;OTB",
+            "\\fTimes New Roman|b0|i0|c0|p18;FMS",
+            "\\fTimes New Roman|b0|i0|c0|p18;ODF",
+            "Closure",
+            "Pole",
+            "96F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;48F Cable",
+            "\\fTimes New Roman|b0|i0|c0|p18;24F Cable",
+            "12F Riser",
+            "6F Cable",
+            "12F Universal",
+            "\\C177;\\c8991017;PVC",
+            "\\C177;\\c8991017;Duct",
+            "\\LLegend :",
+            "\\C177;\\c8991017;Trenching",
+            "Compound Wall",
+            "STEPS",
+            "STEPS",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "A.P",
+            "E.B",
+            "E.B",
+            "E.B",
+            "Main Gate",
+            "507(5HP)",
+            "506(5HP)",
+            "508(5HP)",
+            "509(5HP)",
+            "510(5HP)",
+            "505(5HP)",
+            "504(5HP)",
+            "501(5HP)",
+            "503(5HP)",
+            "502(5HP)",
+            "12M 24F Cable With C.C Trench",
+            "10M 24F Cable With Compound Wall Clamping with Duct",
+            "3M 24F Cable With PVC",
+            "4M 24F Cable Vertical Clamping to Pillar with Duct",
+            "18M 24F Cable Vertical Clamping with Duct",
+            "95M 12F Cable with Duct",
+            "35M 12F Cable with Duct"
+        ],
+        "layers_found": [
+            "FLOORS",
+            "0",
+            "6F CABLE",
+            "POLE",
+            "12F UNIVERSAL",
+            "CLOSURE",
+            "FAT",
+            "OTB",
+            "FMS",
+            "ODF",
+            "96F CABLE",
+            "48F CABLE",
+            "24F CABLE",
+            "12F RISER",
+            "AAA01"
+        ],
+        "blocks_found": [
+            "FLOOR",
+            "CHAMBER",
+            "FMS",
+            "FAT",
+            "OTB",
+            "POLE",
+            "ODF",
+            "IBDPOLE"
+        ]
+    },
+    "reports": [
+        {
+            "name": "MWO.xlsx",
+            "status": "Ready"
+        },
+        {
+            "name": "OSP_ODN.xlsx",
+            "status": "Ready"
+        },
+        {
+            "name": "OH_Accessories.xlsx",
+            "status": "Ready"
+        },
+        {
+            "name": "FTTH_Details.xlsx",
+            "status": "Ready"
+        },
+        {
+            "name": "Validation_Report.xlsx",
+            "status": "Ready"
+        }
+    ]
+}

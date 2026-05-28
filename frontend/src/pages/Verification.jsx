@@ -9,10 +9,33 @@ import {
 } from "lucide-react";
 
 import "./Verification.css";
+import { useEffect, useState } from "react";
+
+const API_BASE = "http://127.0.0.1:8000";
 
 function Verification() {
-  const project = JSON.parse(localStorage.getItem("genex-project")) || {};
-  const extraction = JSON.parse(localStorage.getItem("genex-extraction")) || {};
+  const [verificationData, setVerificationData] = useState({});
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  fetch(`${API_BASE}/verification-data`)
+    .then((res) => res.json())
+    .then((data) => {
+      setVerificationData(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
+
+if (loading) {
+  return <h2>Loading Verification Data...</h2>;
+}
+
+const extraction = verificationData.extraction || verificationData || {};
+const backendChecks = verificationData.checks || [];
 
   const checks = [
     {

@@ -6,8 +6,18 @@ import math
 def clean_text(text):
     if not text:
         return ""
+
+    text = str(text)
     text = text.replace("\\P", " ")
     text = text.replace("\n", " ")
+    text = text.replace("^I", " ")
+    text = text.replace("\\t", " ")
+
+    # Remove AutoCAD MTEXT formatting
+    text = re.sub(r"\{\\[^;]*;", " ", text)
+    text = text.replace("{", " ")
+    text = text.replace("}", " ")
+
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
@@ -26,16 +36,29 @@ def get_text(entity):
     return ""
 
 
-def find_quantity(text, item):
-    pattern = rf"{item}.*?:\s*(\d+)\s*(NOS|NO|NUMBERS|METERS|METER|MTR|MTRS|M)?"
+def get_bom_quantity(text, item_pattern):
+    text = clean_text(text)
+
+    pattern = (
+        rf"{item_pattern}"
+        rf"\s*[:\-]?\s*"
+        rf"(\d+(?:\.\d+)?)"
+        rf"\s*(NOS|NO|METERS|METER|MTR|MTRS|M)?"
+    )
+
     match = re.search(pattern, text, re.IGNORECASE)
-    return int(match.group(1)) if match else 0
+
+    if match:
+        return float(match.group(1))
+
+    return 0
 
 
 def extract_dwg_data(file_path):
     data = {
         "odf_count": 0,
         "fat_count": 0,
+        "fms_count": 0,
         "otb_count": 0,
         "closure_count": 0,
         "pole_count": 0,
@@ -78,115 +101,61 @@ def extract_dwg_data(file_path):
                 if text:
                     data["texts_found"].append(text)
 
-                if "ODF" in upper:
-                    data["odf_count"] += 1
-
-                if "FAT" in upper or "FAT BOX" in upper or "FMS" in upper:
-                    data["fat_count"] += 1
-
-                if "OTB" in upper:
-                    data["otb_count"] += 1
-
-                if "CLOSURE" in upper:
-                    data["closure_count"] += 1
-
-                if "POLE" in upper:
-                    data["pole_count"] += 1
-
-                if "SPLITTER" in upper or "1:8" in upper or "1 : 8" in upper:
-                    data["splitter_count"] += 1
-
-                hp = re.search(r"(\d+)\s*HP", upper)
-                if hp:
-                    data["hp_count"] += int(hp.group(1))
+                actual_hp = re.search(r"ACTUAL\s*HP\s*[-:]?\s*(\d+)", upper)
+                if actual_hp:
+                    data["hp_count"] = int(actual_hp.group(1))
 
             if dxftype == "INSERT":
                 block = entity.dxf.name.upper()
-                data["blocks_found"].append(block)
+                if block and block not in data["blocks_found"]:
+                    data["blocks_found"].append(block)
 
-                if "ODF" in block:
-                    data["odf_count"] += 1
+        text = clean_text(full_text)
 
-                if "FAT" in block or "FMS" in block:
-                    data["fat_count"] += 1
+        data["fms_count"] = get_bom_quantity(
+            text,
+            r"24F\s*FMS"
+        )
 
-                if "OTB" in block:
-                    data["otb_count"] += 1
+        data["splitter_count"] = get_bom_quantity(
+            text,
+            r"1\s*:\s*8\s*\*\s*1\s*Splitters?"
+        )
 
-                if "CLOSURE" in block:
-                    data["closure_count"] += 1
+        data["fat_count"] = data["splitter_count"]
 
-                if "POLE" in block:
-                    data["pole_count"] += 1
+        data["cable_24f"] = get_bom_quantity(
+            text,
+            r"24F\s*Cable"
+        )
 
-                if "SPLITTER" in block:
-                    data["splitter_count"] += 1
+        data["cable_12f"] = get_bom_quantity(
+            text,
+            r"12F\s*Cable"
+        )
 
-            cable_keywords = ["96F", "48F", "24F", "12F", "6F", "CABLE", "FIBER"]
+        data["duct_length"] = get_bom_quantity(
+            text,
+            r"DUCT"
+        )
 
-            if dxftype == "LINE" and any(k in layer for k in cable_keywords):
-                length = distance(entity.dxf.start, entity.dxf.end)
+        data["cc_trench"] = get_bom_quantity(
+            text,
+            r"C\.?\s*C\.?\s*Trench"
+        )
 
-                if "96F" in layer:
-                    data["cable_96f"] += length
-                elif "48F" in layer:
-                    data["cable_48f"] += length
-                elif "24F" in layer:
-                    data["cable_24f"] += length
-                elif "12F" in layer:
-                    data["cable_12f"] += length
-                elif "6F" in layer:
-                    data["cable_6f"] += length
-                else:
-                    data["cable_length"] += length
-
-            if dxftype == "LWPOLYLINE" and any(k in layer for k in cable_keywords):
-                points = list(entity.get_points("xy"))
-                length = 0
-
-                for i in range(len(points) - 1):
-                    length += distance(points[i], points[i + 1])
-
-                if "96F" in layer:
-                    data["cable_96f"] += length
-                elif "48F" in layer:
-                    data["cable_48f"] += length
-                elif "24F" in layer:
-                    data["cable_24f"] += length
-                elif "12F" in layer:
-                    data["cable_12f"] += length
-                elif "6F" in layer:
-                    data["cable_6f"] += length
-                else:
-                    data["cable_length"] += length
-
-        full_text = clean_text(full_text)
-
-        data["fat_count"] = max(data["fat_count"], find_quantity(full_text, r"24F\s*FMS"))
-        data["splitter_count"] = max(data["splitter_count"], find_quantity(full_text, r"1\s*:\s*8.*?SPLITTERS?"))
-        data["cable_24f"] = max(data["cable_24f"], find_quantity(full_text, r"24F\s*CABLE"))
-        data["cable_12f"] = max(data["cable_12f"], find_quantity(full_text, r"12F\s*CABLE"))
-        data["duct_length"] = max(data["duct_length"], find_quantity(full_text, r"DUCT"))
-        data["cc_trench"] = max(data["cc_trench"], find_quantity(full_text, r"C\.?C\s*TRENCH"))
-        data["pvc_25mm"] = max(data["pvc_25mm"], find_quantity(full_text, r"25MM\s*PVC"))
-
-        data["cable_96f"] = round(data["cable_96f"], 2)
-        data["cable_48f"] = round(data["cable_48f"], 2)
-        data["cable_24f"] = round(data["cable_24f"], 2)
-        data["cable_12f"] = round(data["cable_12f"], 2)
-        data["cable_6f"] = round(data["cable_6f"], 2)
+        data["pvc_25mm"] = get_bom_quantity(
+            text,
+            r"25MM\s*PVC"
+        )
 
         data["cable_length"] = round(
-            data["cable_96f"]
-            + data["cable_48f"]
-            + data["cable_24f"]
-            + data["cable_12f"]
-            + data["cable_6f"],
-            2,
+            data["cable_24f"] + data["cable_12f"], 2
         )
 
         data["bom_items"] = [
-            {"item": "24F FMS", "quantity": data["fat_count"], "uom": "Nos"},
+            {"item": "FAT Box", "quantity": data["fat_count"], "uom": "Nos"},
+            {"item": "24F FMS", "quantity": data["fms_count"], "uom": "Nos"},
             {"item": "1:8 Splitters", "quantity": data["splitter_count"], "uom": "Nos"},
             {"item": "96F Cable", "quantity": data["cable_96f"], "uom": "Meters"},
             {"item": "48F Cable", "quantity": data["cable_48f"], "uom": "Meters"},

@@ -1,9 +1,32 @@
 import { Download, Network, IndianRupee, CheckCircle } from "lucide-react";
 import "./OSPODN.css";
+import { useEffect, useState } from "react";
+
+const API_BASE = "http://127.0.0.1:8000";
 
 function OSPODN() {
-  const project = JSON.parse(localStorage.getItem("genex-project")) || {};
-  const extraction = JSON.parse(localStorage.getItem("genex-extraction")) || {};
+  const [ospData, setOspData] = useState({});
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  fetch(`${API_BASE}/osp-data`)
+    .then((res) => res.json())
+    .then((data) => {
+      setOspData(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
+
+if (loading) {
+  return <h2>Loading OSP & ODN Data...</h2>;
+}
+
+const project = ospData.project || {};
+const extraction = ospData.extraction || ospData || {};
 
   const hp = extraction.hp_count || 1952;
 

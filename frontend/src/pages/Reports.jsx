@@ -1,30 +1,52 @@
 import { Download } from "lucide-react";
+import { useEffect, useState } from "react";
 import "./AppLayout.css";
 
+const API_BASE = "http://127.0.0.1:8000";
+
 function Reports() {
-  const reports = [
-    "BOQ.xlsx",
-    "BOM.xlsx",
-    "MWO.xlsx",
-    "Capex_Tracker.xlsx",
-    "Cable_Length_Summary.xlsx",
-    "Validation_Report.xlsx",
-  ];
+  const [reports, setReports] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API_BASE}/reports-data`)
+      .then((res) => res.json())
+      .then((data) => {
+        setReports(Array.isArray(data) ? data : []);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
+
+  const downloadFile = (fileName) => {
+    window.open(`${API_BASE}/download/${fileName}`, "_blank");
+  };
+
+  if (loading) {
+    return <h2>Loading Reports...</h2>;
+  }
 
   return (
     <div className="module-page">
       <h1>Reports</h1>
-      <p>Download all generated project documents.</p>
+      <p>Download generated project reports.</p>
 
       <div className="reports-grid">
-        {reports.map((file) => (
-          <div className="report-card" key={file}>
+        {reports.map((report, index) => (
+          <div className="report-card" key={index}>
             <div>
-              <h2>{file}</h2>
-              <p>Not generated yet</p>
+              <h2>{report.name}</h2>
+              <p>{report.status}</p>
             </div>
-            <button className="download-btn">
-              <Download size={17} />
+
+            <button
+              className="download-btn"
+              onClick={() => downloadFile(report.name)}
+            >
+              <Download size={18} />
               Download
             </button>
           </div>

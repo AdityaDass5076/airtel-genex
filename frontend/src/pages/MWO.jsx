@@ -1,9 +1,30 @@
 import { Download, FileText, IndianRupee, CheckCircle } from "lucide-react";
 import "./MWO.css";
+import { useEffect, useState } from "react";
 
 function MWO() {
-  const project = JSON.parse(localStorage.getItem("genex-project")) || {};
-  const extraction = JSON.parse(localStorage.getItem("genex-extraction")) || {};
+  const [mwoData, setMwoData] = useState({});
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  fetch("http://127.0.0.1:8000/mwo-data")
+    .then((res) => res.json())
+    .then((data) => {
+      setMwoData(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
+
+if (loading) {
+  return <h2>Loading MWO Data...</h2>;
+}
+
+const project = mwoData.project || {};
+const extraction = mwoData.extraction || mwoData || {};
 
   const rows = [
     ["A", "Intra-city Fiber connecting nodes and FTTH splitters", "KM", "0.000"],

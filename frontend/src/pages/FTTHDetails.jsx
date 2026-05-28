@@ -1,9 +1,32 @@
 import { Download, Router, Home, IndianRupee, CheckCircle2 } from "lucide-react";
 import "./FTTHDetails.css";
+import { useEffect, useState } from "react";
+
+const API_BASE = "http://127.0.0.1:8000";
 
 function FTTHDetails() {
-  const project = JSON.parse(localStorage.getItem("genex-project")) || {};
-  const extraction = JSON.parse(localStorage.getItem("genex-extraction")) || {};
+  const [ftthData, setFtthData] = useState({});
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  fetch(`${API_BASE}/ftth-data`)
+    .then((res) => res.json())
+    .then((data) => {
+      setFtthData(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
+
+if (loading) {
+  return <h2>Loading FTTH Details...</h2>;
+}
+
+const project = ftthData.project || {};
+const extraction = ftthData.extraction || ftthData || {};
 
   const hp = extraction.hp_count || 1952;
 

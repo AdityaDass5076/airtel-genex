@@ -1,12 +1,32 @@
 import { Download, Cable, IndianRupee, CheckCircle2 } from "lucide-react";
 import "./OHAccessories.css";
+import { useEffect, useState } from "react";
+
+const API_BASE = "http://127.0.0.1:8000";
 
 function OHAccessories() {
-  const extraction =
-    JSON.parse(localStorage.getItem("genex-extraction")) || {};
+  const [ohData, setOhData] = useState({});
+const [loading, setLoading] = useState(true);
 
-  const project =
-    JSON.parse(localStorage.getItem("genex-project")) || {};
+useEffect(() => {
+  fetch(`${API_BASE}/oh-data`)
+    .then((res) => res.json())
+    .then((data) => {
+      setOhData(data);
+      setLoading(false);
+    })
+    .catch((err) => {
+      console.error(err);
+      setLoading(false);
+    });
+}, []);
+
+if (loading) {
+  return <h2>Loading OH Accessories Data...</h2>;
+}
+
+const project = ohData.project || {};
+const extraction = ohData.extraction || ohData || {};
 
   const cableLength = extraction.cable_length || 3340;
 

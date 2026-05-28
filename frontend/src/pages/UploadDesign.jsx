@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import "./AppLayout.css";
 
-const API_BASE = "https://airtel-genex-backend.onrender.com";
+const API_BASE = "http://127.0.0.1:8000";
 
 function UploadDesign() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -138,9 +138,17 @@ function UploadDesign() {
           ) : (
             <>
               <div className="extraction-grid">
-                <ExtractCard
-                  label="FAT/FMS Count"
-                  value={extractData.fat_count}
+                <ExtractCard 
+                  label="FAT Count" 
+                  value={extractData.fat_count || 0} 
+                />
+                <ExtractCard 
+                  label="FMS Count" 
+                  value={extractData.fms_count || 0} 
+                />
+                <ExtractCard 
+                  label="Splitter Count" 
+                  value={extractData.splitter_count || 0} 
                 />
                 <ExtractCard
                   label="OTB Count"
@@ -149,10 +157,6 @@ function UploadDesign() {
                 <ExtractCard
                   label="ODF Count"
                   value={extractData.odf_count}
-                />
-                <ExtractCard
-                  label="Splitter Count"
-                  value={extractData.splitter_count}
                 />
                 <ExtractCard
                   label="Cable Length"
